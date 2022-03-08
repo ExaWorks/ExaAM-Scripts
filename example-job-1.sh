@@ -6,8 +6,8 @@ set -eu
 #BSUB -nnodes 1                   #number of nodes
 #BSUB -W  5                       #walltime in minutes
 #BSUB -P MED106                   #account
-#BSUB -e gpu_exa_error.txt        #stderr
-#BSUB -o gpu_exa_out.txt          #stdout
+#BSUB -e gpu_exa_error.log        #stderr
+#BSUB -o gpu_exa_out.log          #stdout
 #BSUB -J ExaConstit               #name of job
 #BSUB -alloc_flags smt1
 
