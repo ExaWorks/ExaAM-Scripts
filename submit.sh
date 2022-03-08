@@ -9,9 +9,10 @@ fi
 
 JOB=$1
 
-for f in *.txt
+shopt -s nullglob
+for f in *.log
 do
-  mv -v --backup=numbered $f $f.bak~
+  mv -v --backup=numbered --no-target-directory $f $f.bak~
 done
 
 bsub $JOB
