@@ -19,4 +19,7 @@ module load gcc/7.5.0 cuda/11.4.2 adios2/2.7.1 zlib/1.2.11
 
 PATH=/gpfs/alpine/world-shared/mat190/exaconstit:$PATH
 
-jsrun -n6 -r6 -c1 -g 1 exaconstit-mechanics -opt options.toml
+DATA=/gpfs/alpine/world-shared/mat190/exaconstit/exaconstit_example_data
+
+jsrun -n6 -r6 -c1 -g 1 exaconstit-mechanics -opt $DATA/voce_ea.toml
+# options.toml
